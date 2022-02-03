@@ -47,3 +47,4 @@
 
 gists/**         linguist-documentation=false
 brew/**         linguist-documentation=false
+CODE_OF_CONDUCT/**         linguist-documentation=true
