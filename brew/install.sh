@@ -42,6 +42,7 @@ brew install --cask \
   iterm2 \
   postman \
   gpg-suite \
+  raspberry-pi-imager \
 # Install audio programs
   sonic-pi \
   spotify \
