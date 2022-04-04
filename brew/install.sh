@@ -43,11 +43,15 @@ brew install --cask \
   postman \
   gpg-suite \
   xxh \
+  raspberry-pi-imager \
 # Install audio programs
   sonic-pi \
   spotify \
   waves-central \
-  izotope-product-portal &&
+  izotope-product-portal  \
+# Install visual programs
+  affinity-designer \
+  affinity-photo &&
 # Configure git
 git config user.name chiefmikey &&
 git config user.email wolfemikl@gmail.com &&
