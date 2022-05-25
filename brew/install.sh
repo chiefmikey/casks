@@ -10,6 +10,7 @@ brew install \
   git \
   zsh-syntax-highlighting \
   zsh-autosuggestions \
+  postgresql \
   node \
   yarn \
   pnpm &&
@@ -51,6 +52,7 @@ brew install --cask \
   izotope-product-portal  \
 # Install visual programs
   affinity-designer \
+  handbrake \
   affinity-photo &&
 # Configure git
 git config user.name chiefmikey &&
