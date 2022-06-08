@@ -2,7 +2,7 @@
 
 set -x
 export PATH=.github
-export MESSAGE'Update dependabot workflow'
+export MESSAGE='Update dependabot workflow'
 cd ~/dropbox/dev/apps/auth-server && git pull --rebase=false --autostash --no-edit && git add ${PATH} && git commit ${PATH} -m ${MESSAGE} && git push
 cd ~/dropbox/dev/apps/chalet-le-jar && git pull --rebase=false --autostash --no-edit && git add ${PATH} && git commit ${PATH} -m ${MESSAGE} && git push
 cd ~/dropbox/dev/apps/chiefmikey && git pull --rebase=false --autostash --no-edit && git add ${PATH} && git commit ${PATH} -m ${MESSAGE} && git push

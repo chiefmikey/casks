@@ -13,6 +13,7 @@ brew install \
   postgresql \
   node \
   yarn \
+  mosh \
   pnpm &&
 # Install Homebrew casks
 brew install --cask \
