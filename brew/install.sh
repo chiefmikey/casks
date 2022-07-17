@@ -14,6 +14,7 @@ brew install \
   node \
   yarn \
   mosh \
+  git-lfs \
   pnpm &&
 # Install Homebrew casks
 brew install --cask \
