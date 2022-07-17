@@ -69,5 +69,7 @@ sudo sh -c "$(wget -qO- https://raw.githubusercontent.com/sp1thas/dropboxignore/
 # Configure gnupg
 echo "pinentry-program /opt/homebrew/bin/pinentry-mac" >> ~/.gnupg/gpg-agent.conf &&
 killall gpg-agent &&
+# Configure npm
+npm config set fund false &&
 # Install ncu
 npm install -g npm-check-updates
