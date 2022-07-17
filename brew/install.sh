@@ -17,6 +17,8 @@ brew install \
   mosh \
   git-lfs \
   pnpm &&
+# Enable alternate cask versions
+brew tap homebrew/cask-versions &&
 # Install Homebrew casks
 brew install --cask \
 # Install general programs
