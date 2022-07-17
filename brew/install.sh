@@ -1,7 +1,8 @@
 #!/bin/zsh
 
-# Install Homebrew and packages
-brew tap homebrew/cask-versions &&
+# Install Homebrew
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" &&
+# Install packages
 brew install \
   curl \
   wget \
