@@ -59,6 +59,7 @@ brew install --cask \
 # Configure git
 git config user.name chiefmikey &&
 git config user.email wolfemikl@gmail.com &&
+git lfs install &&
 # Install dropbox ignore
 sudo sh -c "$(wget -qO- https://raw.githubusercontent.com/sp1thas/dropboxignore/master/utils/install.sh)" &&
 # Configure gnupg
