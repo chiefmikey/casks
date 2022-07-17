@@ -58,6 +58,7 @@ brew install --cask \
 # Install visual programs
   affinity-designer \
   handbrake \
+  obs \
   affinity-photo &&
 # Configure git
 git config user.name chiefmikey &&
