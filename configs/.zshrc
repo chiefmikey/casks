@@ -21,11 +21,11 @@ alias code="code-insiders"
 
 # Update scripts
 alias update-homebrew="~/dropbox/dev/apps/extra/scripts/update-homebrew.sh"
-alias update-npm="~/dropbox/dev/apps/extra/scripts/update-npm.sh"
-alias update="update-homebrew && update-npm"
+alias update-npm-global="~/dropbox/dev/apps/extra/scripts/update-npm.sh"
+alias update="update-homebrew && update-npm-global"
 
 # Sync scripts
-alias sync-apps="~/dropbox/dev/apps/extra/scripts/sync-apps.sh ~/dropbox/dev/apps"
+alias sync-apps="~/dropbox/dev/apps/extra/scripts/sync-apps.sh"
 
 # Misc
 path+=/usr/local/sbin
