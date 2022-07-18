@@ -43,6 +43,8 @@ echo "yalc (${v} -> ${$(yalc --version)})"
 
 alias update="bru npmu"
 
+alias sync-apps="~/dropbox/dev/apps/extra/scripts/sync-apps.sh"
+
 path+=/usr/local/sbin
 
 export GPG_TTY=$(tty)
