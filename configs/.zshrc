@@ -1,50 +1,33 @@
+# Plugins
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/local/opt/powerlevel10k/powerlevel10k.zsh-theme
+source ~/.p10k.zsh
 
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
+# Load nvm on zsh exec
+# [ -s "/usr/local/opt/nvm/nvm.sh" ] && \. "/usr/local/opt/nvm/nvm.sh"
+# Set nvm directory
 export NVM_DIR="$HOME/.nvm"
-#[ -s "/usr/local/opt/nvm/nvm.sh" ] && \. "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
-[ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+# Load nvm on alias exec
 alias nvm="unalias nvm; [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"; nvm $@"
+# Load nvm bash_completion
+[ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/usr/local/opt/nvm/etc/bash_completion.d/nvm"
 
+# iTerm2 shell integration
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
-PATH="/usr/local/opt/grep/libexec/gnubin:$PATH"
-
+# Vscode version
 alias code="code-insiders"
 
-alias bru='
-echo "+ brew update" && brew update &&
-echo "+ brew upgrade" && brew upgrade &&
-echo "+ brew cleanup" && brew cleanup
-'
+# Update scripts
+alias update-homebrew="~/dropbox/dev/apps/extra/scripts/update-homebrew.sh"
+alias update-npm="~/dropbox/dev/apps/extra/scripts/update-npm.sh"
+alias update="update-homebrew update-npm"
 
-alias npmu='
-echo "+ npm global update" &&
-export v=$(npm --version) &&
-npm i -gs npm &&
-echo "npm (${v} -> ${$(npm --version)})" &&
-export v=$(ncu --version) &&
-npm i -gs npm-check-updates &&
-echo "npm-check-updates (${v} -> ${$(ncu --version)})" &&
-export v=$(yalc --version) &&
-npm i -gs yalc &&
-echo "yalc (${v} -> ${$(yalc --version)})"
-'
+# Sync scripts
+alias sync-apps="~/dropbox/dev/apps/extra/scripts/sync-apps.sh ~/dropbox/dev/apps"
 
-alias update="bru npmu"
-
-alias sync-apps="~/dropbox/dev/apps/extra/scripts/sync-apps.sh"
-
+# Misc
 path+=/usr/local/sbin
-
+PATH="/usr/local/opt/grep/libexec/gnubin:$PATH"
 export GPG_TTY=$(tty)
