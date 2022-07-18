@@ -22,24 +22,24 @@ PATH="/usr/local/opt/grep/libexec/gnubin:$PATH"
 
 alias code="code-insiders"
 
-alias bru="
+alias bru='
 echo "+ brew update" && brew update &&
 echo "+ brew upgrade" && brew upgrade &&
 echo "+ brew cleanup" && brew cleanup
-"
+'
 
-alias npmu="
-echo "+ npm globals" &&
-v=$(npm --version) &&
-npm i -gs --no-progress npm &&
-echo "+ npm ($v -> ${$(npm --version)})" &&
-v=$(ncu --version) &&
-npm i -gs --no-progress npm-check-updates &&
-echo "+ npm-check-updates ($v -> ${$(ncu --version)})" &&
-v=$(yalc --version) &&
-npm i -gs --no-progress yalc &&
-echo "+ yalc ($v -> ${$(yalc --version)})"
-"
+alias npmu='
+echo "+ npm global update" &&
+export v=$(npm --version) &&
+npm i -gs npm &&
+echo "+ npm (${v} -> ${$(npm --version)})" &&
+export v=$(ncu --version) &&
+npm i -gs npm-check-updates &&
+echo "+ npm-check-updates (${v} -> ${$(ncu --version)})" &&
+export v=$(yalc --version) &&
+npm i -gs yalc &&
+echo "+ yalc (${v} -> ${$(yalc --version)})"
+'
 
 alias update="bru npmu"
 
