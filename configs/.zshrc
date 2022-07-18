@@ -22,7 +22,7 @@ alias code="code-insiders"
 # Update scripts
 alias update-homebrew="~/dropbox/dev/apps/extra/scripts/update-homebrew.sh"
 alias update-npm="~/dropbox/dev/apps/extra/scripts/update-npm.sh"
-alias update="update-homebrew update-npm"
+alias update="update-homebrew && update-npm"
 
 # Sync scripts
 alias sync-apps="~/dropbox/dev/apps/extra/scripts/sync-apps.sh ~/dropbox/dev/apps"
