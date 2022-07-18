@@ -1,5 +1,6 @@
-#!/bin/zsh
+#!/bin/zsh -v
 
+set -x
 # Install Homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" &&
 # Install packages

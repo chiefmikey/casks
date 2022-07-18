@@ -1,4 +1,4 @@
-#!/bin/bash -v
+#!/bin/zsh -v
 
 set -x
 export PATH=.github
