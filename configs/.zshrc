@@ -32,13 +32,13 @@ alias npmu='
 echo "+ npm global update" &&
 export v=$(npm --version) &&
 npm i -gs npm &&
-echo "+ npm (${v} -> ${$(npm --version)})" &&
+echo "npm (${v} -> ${$(npm --version)})" &&
 export v=$(ncu --version) &&
 npm i -gs npm-check-updates &&
-echo "+ npm-check-updates (${v} -> ${$(ncu --version)})" &&
+echo "npm-check-updates (${v} -> ${$(ncu --version)})" &&
 export v=$(yalc --version) &&
 npm i -gs yalc &&
-echo "+ yalc (${v} -> ${$(yalc --version)})"
+echo "yalc (${v} -> ${$(yalc --version)})"
 '
 
 alias update="bru npmu"
