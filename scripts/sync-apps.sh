@@ -1,21 +1,20 @@
-#!/bin/zsh -v
+#!/bin/zsh
 
-set -x
-cd ~/dropbox/dev/apps/auth-server && git pull --rebase=true --autostash --no-edit
-cd ~/dropbox/dev/apps/chalet-le-jar && git pull --rebase=true --autostash --no-edit
-cd ~/dropbox/dev/apps/chiefmikey && git pull --rebase=true --autostash --no-edit
-cd ~/dropbox/dev/apps/cloudy-nights && git pull --rebase=true --autostash --no-edit
-cd ~/dropbox/dev/apps/docker-images && git pull --rebase=true --autostash --no-edit
-cd ~/dropbox/dev/apps/eslint-plugin-disable-autofix && git pull --rebase=true --autostash --no-edit
-cd ~/dropbox/dev/apps/extra && git pull --rebase=true --autostash --no-edit
-cd ~/dropbox/dev/apps/gitlang && git pull --rebase=true --autostash --no-edit
-cd ~/dropbox/dev/apps/name-generator && git pull --rebase=true --autostash --no-edit
-cd ~/dropbox/dev/apps/secret-souls && git pull --rebase=true --autostash --no-edit
-cd ~/dropbox/dev/apps/stats && git pull --rebase=true --autostash --no-edit
-cd ~/dropbox/dev/apps/tales-from-the-script && git pull --rebase=true --autostash --no-edit
-cd ~/dropbox/dev/apps/template-cemetery && git pull --rebase=true --autostash --no-edit
-cd ~/dropbox/dev/apps/the-myspace && git pull --rebase=true --autostash --no-edit
-cd ~/dropbox/dev/apps/tomorrow-night-darkly && git pull --rebase=true --autostash --no-edit
-cd ~/dropbox/dev/apps/view-master-3000 && git pull --rebase=true --autostash --no-edit
-cd ~/dropbox/dev/apps/you-got-this && git pull --rebase=true --autostash --no-edit
-cd ~/dropbox/dev/apps/zourdough && git pull --rebase=true --autostash --no-edit
+cd ~/dropbox/dev/apps/auth-server && echo "auth-server: $(git pull --rebase=true --autostash --no-edit)"
+cd ~/dropbox/dev/apps/chalet-le-jar && echo "chalet-le-jar: $(git pull --rebase=true --autostash --no-edit)"
+cd ~/dropbox/dev/apps/chiefmikey && echo "chiefmikey: $(git pull --rebase=true --autostash --no-edit)"
+cd ~/dropbox/dev/apps/cloudy-nights && echo "cloudy-nights: $(git pull --rebase=true --autostash --no-edit)"
+cd ~/dropbox/dev/apps/docker-images && echo "docker-images: $(git pull --rebase=true --autostash --no-edit)"
+cd ~/dropbox/dev/apps/eslint-plugin-disable-autofix && echo "eslint-plugin-disable-autofix: $(git pull --rebase=true --autostash --no-edit)"
+cd ~/dropbox/dev/apps/extra && echo "extra: $(git pull --rebase=true --autostash --no-edit)"
+cd ~/dropbox/dev/apps/gitlang && echo "gitlang: $(git pull --rebase=true --autostash --no-edit)"
+cd ~/dropbox/dev/apps/name-generator && echo "name-generator: $(git pull --rebase=true --autostash --no-edit)"
+cd ~/dropbox/dev/apps/secret-souls && echo "secret-souls: $(git pull --rebase=true --autostash --no-edit)"
+cd ~/dropbox/dev/apps/stats && echo "stats: $(git pull --rebase=true --autostash --no-edit)"
+cd ~/dropbox/dev/apps/tales-from-the-script && echo "tales-from-the-script: $(git pull --rebase=true --autostash --no-edit)"
+cd ~/dropbox/dev/apps/template-graveyard && echo "template-graveyard: $(git pull --rebase=true --autostash --no-edit)"
+cd ~/dropbox/dev/apps/the-myspace && echo "the-myspace: $(git pull --rebase=true --autostash --no-edit)"
+cd ~/dropbox/dev/apps/tomorrow-night-darkly && echo "tomorrow-night-darkly: $(git pull --rebase=true --autostash --no-edit)"
+cd ~/dropbox/dev/apps/view-master-3000 && echo "view-master-3000: $(git pull --rebase=true --autostash --no-edit)"
+cd ~/dropbox/dev/apps/you-got-this && echo "you-got-this: $(git pull --rebase=true --autostash --no-edit)"
+cd ~/dropbox/dev/apps/zourdough && echo "zourdough: $(git pull --rebase=true --autostash --no-edit)"
