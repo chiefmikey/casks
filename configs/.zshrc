@@ -1,6 +1,5 @@
 # Plugins
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/local/opt/powerlevel10k/powerlevel10k.zsh-theme
 source ~/.p10k.zsh
 
@@ -21,8 +20,8 @@ alias code="code-insiders"
 
 # Update scripts
 alias update-homebrew="~/dropbox/dev/apps/extra/scripts/update-homebrew.sh"
-alias update-npm-global="~/dropbox/dev/apps/extra/scripts/update-npm.sh"
-alias update="update-homebrew && update-npm-global"
+alias update-npm-global="~/dropbox/dev/apps/extra/scripts/update-npm-global.sh"
+alias update="update-homebrew; update-npm-global"
 
 # Sync scripts
 alias sync-apps="~/dropbox/dev/apps/extra/scripts/sync-apps.sh"
@@ -31,3 +30,6 @@ alias sync-apps="~/dropbox/dev/apps/extra/scripts/sync-apps.sh"
 path+=/usr/local/sbin
 PATH="/usr/local/opt/grep/libexec/gnubin:$PATH"
 export GPG_TTY=$(tty)
+
+# zsh syntax highlighting (must be at end of zshrc)
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
