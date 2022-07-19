@@ -1,58 +1,31 @@
 #!/bin/zsh
 
-export ROOT=${1}
-export x=${2}
-export MESSAGE=${3}
-export METHOD=${4}
-
-if [ -z ${ROOT} ]; then
-  echo "+ Input Root:"
-  read ROOT
-elif [ -n ${ROOT} ]; then
-  if [ -d ${ROOT} ]; then
-    echo "+ Root: ${ROOT}"
-  else
-    echo "+ 
-else
-  echo "+ Method: Unknown"
-  exit 1
+while getopts 'y' OPTION; do
+  case $OPTION in
+    y)
+      export Y1="y"
+      export Y2="y"
+      ;;
+  esac
 done
+shift "$((OPTIND-1))"
 
+export DEFAULT_PULL_METHOD="rebase"
+export DEFAULT_ROOT="~/dropbox/dev/apps"
+export DEFAULT_ROOT=${DEFAULT_ROOT/"~"/${HOME}}
+export ROOT=${1}
+export ROOT=${ROOT/"~"/${HOME}}
+export PULL_METHOD=${2}
+export ADD_PATH=${3}
+export COMMIT_MESSAGE=${4}
 
+${HOME}/dropbox/dev/apps/extra/scripts/input-path.sh -d ${DEFAULT_ROOT} -n "Root" ${ROOT}
+${HOME}/dropbox/dev/apps/extra/scripts/input-pull-method.sh -d ${DEFAULT_PULL_METHOD} ${PULL_METHOD}
 
-if [ -z ${METHOD} ] || [ ${METHOD} = "rebase" ]; then
-  echo "+ Method: Rebase"
-  export METHOD="rebase"
-elif [ ${METHOD} = "merge" ]; then
-  echo "+ Method: Merge"
-else
-  echo "+ Method: Unknown"
-exit 1
-
-if [ -z ${METHOD} ] || [ ${METHOD} = "rebase" ]; then
-  echo "+ Method: Rebase"
-  export METHOD="rebase"
-elif [ ${METHOD} = "merge" ]; then
-  echo "+ Method: Merge"
-else
-  echo "+ Method: Unknown"
-exit 1
-
-if [ -z ${METHOD} ] || [ ${METHOD} = "rebase" ]; then
-  echo "+ Method: Rebase"
-  export METHOD="rebase"
-elif [ ${METHOD} = "merge" ]; then
-  echo "+ Method: Merge"
-else
-  echo "+ Method: Unknown"
-  exit 1
-fi
-
-if [ ${METHOD} = "rebase" ]; then
-  find ${ROOT} -type d -name ".git" -exec ${ROOT}/extra/scripts/rebase-commit-all.sh {} \;
-elif [ ${METHOD} = "merge" ]; then
-  find ${ROOT} -type d -name ".git" -exec ${ROOT}/extra/scripts/merge-commit-all.sh {} \;
-fi
+echo "Root: ${ROOT}"
+echo "Pull Method: ${PULL_METHOD}"
+echo "Add Path: ${ADD_PATH}"
+echo "Commit Message: ${COMMIT_MESSAGE}"
 
 export PATH=.github
 export MESSAGE='Update dependabot workflow'
