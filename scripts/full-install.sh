@@ -56,6 +56,7 @@ brew install --cask \
   spotify \
   waves-central \
   izotope-product-portal  \
+  xld \
 # Install visual programs
   affinity-designer \
   handbrake \
