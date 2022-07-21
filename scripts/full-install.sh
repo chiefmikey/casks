@@ -16,10 +16,16 @@ brew install \
   node \
   yarn \
   mosh \
+  xxh \
   git-lfs \
+  openconnect \
+  docker \
   pnpm &&
 # Enable alternate cask versions
 brew tap homebrew/cask-versions &&
+# Enable auto update
+brew tap homebrew/autoupdate &&
+brew autoupdate start 21600 --upgrade --cleanup --greedy --immediate &&
 # Install Homebrew casks
 brew install --cask \
 # Install general programs
@@ -49,7 +55,6 @@ brew install --cask \
   iterm2 \
   postman \
   gpg-suite \
-  xxh \
   raspberry-pi-imager \
 # Install audio programs
   sonic-pi \
