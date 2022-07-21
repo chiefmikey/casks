@@ -19,6 +19,7 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 alias code="code-insiders"
 
 # Update scripts
+alias auto-update-homebrew="brew autoupdate start 21600 --upgrade --cleanup --greedy --immediate"
 alias update-homebrew="~/dropbox/dev/apps/extra/scripts/update-homebrew.sh"
 alias update-npm-global="~/dropbox/dev/apps/extra/scripts/update-npm-global.sh"
 alias update="update-homebrew; update-npm-global"
