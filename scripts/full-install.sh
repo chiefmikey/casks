@@ -70,7 +70,7 @@ brew install --cask \
 # Configure git
 git config user.name chiefmikey &&
 git config user.email wolfemikl@gmail.com &&
-git config --global pull.rebase true &&
+git config --global pull.rebase merges &&
 git config --global rebase.autoStash true &&
 git lfs install &&
 # Install dropbox ignore
