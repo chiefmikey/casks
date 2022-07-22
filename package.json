@@ -1,7 +1,7 @@
 {
-  "name": "extra",
+  "name": "casks",
   "version": "1.0.0",
-  "description": "Monorepo for extra projects",
+  "description": "Casks archive",
   "devDependencies": {
     "@mikey-pro/style-guide": "^4.145.0",
     "eslint": "^8.20.0",
@@ -12,12 +12,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/chiefmikey/extra.git"
+    "url": "git+https://github.com/chiefmikey/casks.git"
   },
-  "homepage": "https://github.com/chiefmikey/extra#readme",
+  "homepage": "https://github.com/chiefmikey/casks#readme",
   "author": "Mikl Wolfe <wolfe@mikl.io> (https://mikl.io)",
   "bugs": {
-    "url": "https://github.com/chiefmikey/extra/issues"
+    "url": "https://github.com/chiefmikey/casks/issues"
   },
   "contributors": [
     "Mikl Wolfe <wolfe@mikl.io> (https://mikl.io)"
