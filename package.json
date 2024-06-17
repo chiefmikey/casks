@@ -4,7 +4,7 @@
   "description": "Casks archive",
   "devDependencies": {
     "@mikey-pro/style-guide": "^4.146.0",
-    "eslint": "^9.4.0",
+    "eslint": "^9.5.0",
     "prettier": "^3.3.2",
     "stylelint": "^16.6.1",
     "typescript": "^5.4.5"
