@@ -6,7 +6,7 @@
     "@mikey-pro/style-guide": "^4.146.0",
     "eslint": "^9.39.1",
     "prettier": "^3.7.4",
-    "stylelint": "^16.26.0",
+    "stylelint": "^16.26.1",
     "typescript": "^5.9.3"
   },
   "license": "MIT",
