@@ -5,7 +5,7 @@
   "description": "Casks archive",
   "devDependencies": {
     "eslint": "^10.0.3",
-    "mikey-pro": "^10.2.0"
+    "mikey-pro": "^10.3.0"
   },
   "license": "MIT",
   "repository": {
