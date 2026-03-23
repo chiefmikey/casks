@@ -4,7 +4,7 @@
   "type": "module",
   "description": "Casks archive",
   "devDependencies": {
-    "eslint": "^10.0.3",
+    "eslint": "^10.1.0",
     "mikey-pro": "^10.3.0"
   },
   "license": "MIT",
